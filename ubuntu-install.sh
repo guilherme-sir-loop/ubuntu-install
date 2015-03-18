@@ -13,4 +13,10 @@ ins-repo -y oracle-java7-installer
 ins-repo -y oracle-java7-set-default
 #Ant
 ins-repo -y ant
- 
+# ANDROID ADB
+add-repo ppa:nilarimogard/webupd8
+upd-repo
+ins-repo -y android-tools-adb android-tools-fastboot
+ins-repo -y  libc6:i386 libgcc1:i386 gcc-4.6-base:i386 libstdc++5:i386 libstdc++6:i386
+echo "export PATH=${PATH}:$HOME/android-sdk/sdk/platform-tools" >> .bashrc
+echo "export PATH=${PATH}:$HOME/android-sdk/sdk/tools" >> .bashrc
