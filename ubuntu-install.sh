@@ -32,3 +32,8 @@ sudo npm install -g cordova
 cd android-sdk
 mkdir cordova
 cd cordova
+#Eclipse Standart with Web
+#Sublime Text 3
+add-repo ppa:webupd8team/sublime-text-3
+upd-repo
+install -y sublime-text-installer
