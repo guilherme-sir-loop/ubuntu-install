@@ -37,3 +37,11 @@ cd cordova
 add-repo ppa:webupd8team/sublime-text-3
 upd-repo
 install -y sublime-text-installer
+#SmartGit,i am a noob a need GUI tools
+wget -c http://www.syntevo.com/smartgit/download?file=smartgit/smartgit-6_5_6.deb
+dpkg -i smartgit-6_5_6.deb
+#eclipse
+install -y eclipse-plataform
+#google chrome
+wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+sudo dpkg -i google-chrome-stable_current_amd64.deb
