@@ -1,7 +1,8 @@
 #!/bin/bash
 # @author:Guilherme Augusto Peixoto de Campos
 # @date:18/03/2015
-# @description:A Script to install the basic applications for my ubuntu usage
+# @description:A Script to install the basic applications for my ubuntu usage, when i am using openbox
+
 
 #Alias
 alias add-repo="sudo add-apt-repository"
@@ -64,6 +65,12 @@ function web(){
     wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
     sudo dpkg -i google-chrome-stable_current_amd64.deb
 }
+function openbox(){
+	ins-repo openbox openbox-themes obconf parcellite thunar nitrogen kupfer
+}
+fuction gnomeshell(){
+	ins-repo gnome-shell
+}
 
 java-enviroment()
 android-development()
@@ -71,4 +78,7 @@ phonegap()
 sublime()
 git()
 web()
+echo "Which on the 2 circunstances did you want to install"
+#if
+
 
