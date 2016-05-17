@@ -10,7 +10,7 @@ alias upd-repo="sudo apt-get update"
 alias ins-repo="sudo apt-get install"
 
 #Install the Java Enviroment
-function java-enviroment(){
+function Java_Enviroment(){
 	add-repo ppa:webupd8team/java
     upd-repo
     ins -y oracle-java7-installer
@@ -21,7 +21,7 @@ function java-enviroment(){
     install -y eclipse-plataform
 }
 
-function android-development(){
+function android_development(){
 	# ANDROID ADB
     add-repo ppa:nilarimogard/webupd8
     upd-repo
@@ -65,20 +65,18 @@ function web(){
     wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
     sudo dpkg -i google-chrome-stable_current_amd64.deb
 }
-function openbox(){
-	ins-repo openbox openbox-themes obconf parcellite thunar nitrogen kupfer
-}
-fuction gnomeshell(){
-	ins-repo gnome-shell
+
+function xubuntu_solve_lock_error(){
+	# "Solve" Xubuntu lock problem
+sudo mkdir /etc/X11/xorg.conf.d/
+echo -e 'Section "Device"\n Identifier "Card0"\n Driver "Intel"\n Option "AccelMethod" "uxa"\nEndSection' | sudo tee /etc/X11/xorg.conf.d/20-intel.conf
 }
 
-java-enviroment()
-android-development()
+
+android_development()
 phonegap()
 sublime()
 git()
 web()
-echo "Which on the 2 circunstances did you want to install"
-#if
-
-
+xubuntu_solve_lock_error()
+Java_Enviroment()
