@@ -74,6 +74,10 @@ echo -e 'Section "Device"\n Identifier "Card0"\n Driver "Intel"\n Option "AccelM
 function synapse(){
 	ins -y synapse 
 }
+function on_vm(){
+        ins -y w3m youtube-dl
+	sudo apt-get remove firefox
+}
 
 
 android_development()
