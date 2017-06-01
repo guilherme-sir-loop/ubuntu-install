@@ -75,7 +75,7 @@ function synapse(){
 	ins -y synapse 
 }
 function on_vm(){
-        ins -y w3m youtube-dl
+        ins -y midori youtube-dl
 	sudo apt-get remove firefox
 }
 
